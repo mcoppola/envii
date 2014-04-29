@@ -1,0 +1,24 @@
+{
+  "name": "envii",
+  "version": "0.0.01",
+  "description": "3D ASCII Graphics for Canvas",
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mcoppola/envii.git"
+  },
+  "keywords": [
+    "graphics",
+    "canvas",
+    "3D"
+  ],
+  "author": "Matthew Coppola <coppola@punkave.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "gulp-concat": "~2.2.0",
+    "gulp": "~3.6.0",
+    "gulp-uglify": "~0.2.1"
+  }
+}
