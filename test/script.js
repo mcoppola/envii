@@ -15,12 +15,6 @@ utils.setCanvas(window);
         // --------------- MAKE ASSETS ------------------------------------------------------- //
     
         var sun = new Asset('sun', 400, 100, 200, models.sun, 12);
-        /*canvas.addEventListener('mousedown', function() {
-            grid.modelAttributes[0] = new planeXTransform(1000, 1, 1, 1);
-            }, false);*/
-
-
-
 
         // --------------- LOAD ASSETS ------------------------------------------------------- //
         //
@@ -32,7 +26,6 @@ utils.setCanvas(window);
         
         assets[0] = sun;
 
-        
 
         // --------------- MAKE SCENE ------------------------------------------------------- //
 
@@ -40,11 +33,8 @@ utils.setCanvas(window);
 
         // scene.add(sun);
       
-        // --------------  DRAW FRAME ------------------------------------------------------- //
-        //
-        // TODO
-        // - move debounce
-        // - add envi behavior type
+        // --------------  DRAW FRAME ------------------------------------------------------- /
+        
         utils.getAnimationFrame();
       (function drawFrame () {
         window.requestAnimationFrame(drawFrame, canvas);

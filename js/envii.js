@@ -2,7 +2,6 @@
 //
 // 3D ASCII Enviroment 
 
-
 function Envi (canvas, window) {
 	this.canvas = new Canvas(canvas);  // canvas context
 	this.keyboard = new Keyboard(window);
