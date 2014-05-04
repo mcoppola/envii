@@ -10,5 +10,24 @@ body {
 } 
 #canvas {
 	background-color: #000;
+	position: absolute;
 	display: block;
+	z-index: 0;
+}
+.fixed-top
+{
+	position: fixed;
+	z-index: 2;
+	height: 100%;
+	width: 100vw;
+}
+.title
+{
+	position: absolute;
+	top: 48vh;
+	font-size: 1em;
+	color: gray;
+	text-align: center;
+	width: 100%;
+	cursor: pointer;
 }

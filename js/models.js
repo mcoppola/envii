@@ -5,18 +5,18 @@ function Models () {
 	this.box = [[0,0,0,'0'], [5,0,0,'0'], [5,5,0,'0'], [0,5,0,'0'],
 		[0,0,5,'0'], [5,0,5,'0'], [5,5,5,'0'], [0,5,5,'0']];
 
-	this.container = [[0,0,100,'&'], [canvas.width,0,100,'&'], [0,canvas.height,100, '&'], 
-		[canvas.width,canvas.height,100,'&'], [0,0,200,'&'], [canvas.width,0,200,'&'], 
-		[0,canvas.height,200, '&'], [canvas.width,canvas.height,200,'&'], [0,0,300,'&'], 
-		[canvas.width,0,300,'&'], [0,canvas.height,300, '&'], [canvas.width,canvas.height,300,'&'], 
-		[0,0,400,'&'], [canvas.width,0,400,'&'], [0,canvas.height,400, '&'], 
-		[canvas.width,canvas.height,400,'&'], [0,0,500,'&'], [canvas.width,0,500,'&'], 
-		[0,canvas.height,500, '&'], [canvas.width,canvas.height,500,'&'], [0,0,600,'&'], 
-		[canvas.width,0,600,'&'], [0,canvas.height,600, '&'], [canvas.width,canvas.height,600,'&'], 
-		[0,0,700,'&'], [canvas.width,0,700,'&'], [0,canvas.height,700, '&'], 
-		[canvas.width,canvas.height,700,'&'], [0,0,800,'&'], [canvas.width,0,800,'&'], 
-		[0,canvas.height,800, '&'], [canvas.width,canvas.height,800,'&'], [0,0,900,'&'], 
-		[canvas.width,0,900,'&'], [0,canvas.height,900, '&'], [canvas.width,canvas.height,900,'&']];
+	this.container = [[0,0,100,'&', '#fdfdfd'], [canvas.width,0,100,'&', '#fdfdfd'], [0,canvas.height,100, '&', '#fdfdfd'], 
+		[canvas.width,canvas.height,100,'&', '#fdfdfd'], [0,0,200,'&', '#fdfdfd'], [canvas.width,0,200,'&', '#fdfdfd'], 
+		[0,canvas.height,200, '&', '#fdfdfd'], [canvas.width,canvas.height,200,'&', '#fdfdfd'], [0,0,300,'&', '#fdfdfd'], 
+		[canvas.width,0,300,'&', '#fdfdfd'], [0,canvas.height,300, '&', '#fdfdfd'], [canvas.width,canvas.height,300,'&', '#fdfdfd'], 
+		[0,0,400,'&', '#fdfdfd'], [canvas.width,0,400,'&', '#fdfdfd'], [0,canvas.height,400, '&', '#fdfdfd'], 
+		[canvas.width,canvas.height,400,'&', '#fdfdfd'], [0,0,500,'&', '#fdfdfd'], [canvas.width,0,500,'&', '#fdfdfd'], 
+		[0,canvas.height,500, '&', '#fdfdfd'], [canvas.width,canvas.height,500,'&', '#fdfdfd'], [0,0,600,'&', '#fdfdfd'], 
+		[canvas.width,0,600,'&', '#fdfdfd'], [0,canvas.height,600, '&', '#fdfdfd'], [canvas.width,canvas.height,600,'&', '#fdfdfd'], 
+		[0,0,700,'&', '#fdfdfd'], [canvas.width,0,700,'&', '#fdfdfd'], [0,canvas.height,700, '&', '#fdfdfd'], 
+		[canvas.width,canvas.height,700,'&', '#fdfdfd'], [0,0,800,'&', '#fdfdfd'], [canvas.width,0,800,'&', '#fdfdfd'], 
+		[0,canvas.height,800, '&', '#fdfdfd'], [canvas.width,canvas.height,800,'&', '#fdfdfd'], [0,0,900,'&', '#fdfdfd'], 
+		[canvas.width,0,900,'&', '#fdfdfd'], [0,canvas.height,900, '&', '#fdfdfd'], [canvas.width,canvas.height,900,'&', '#fdfdfd']];
 
 	// 2D grid
 	this.grid2D = function ( width, height, asci ) {

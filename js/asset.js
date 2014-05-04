@@ -2,13 +2,12 @@
 // -------------- ASSETS ----------------------------------------------- //
 //
 // Objects of Scene
-function Asset (id, x, y, z, geometry, scale) {
+function Asset (geometry, x, y, z, scale) {
 	if (geometry === undefined) { geometry = []; }
 	if (x === undefined) { x = 0; }
 	if (y === undefined) { y = 0; }
 	if (z === undefined) { z = 0; }  
 	if (scale === undefined) { scale = 1; }
-	this.id = id;
 	this.geo = geometry;  //array of geometric coordinates and character value
 	this.xpos = x;
 	this.ypos = y;

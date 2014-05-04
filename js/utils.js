@@ -37,7 +37,7 @@ Envi.prototype.keycheck = function () {
     }
 }
 
-
+// --- GERNERAL PURPOSE STUFF ----------------------- //
 
 var utils = {};
 

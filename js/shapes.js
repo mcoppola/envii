@@ -7,9 +7,14 @@ function Shapes() {
 Shapes.prototype.cube = function(len, char) {
 	if (char === undefined) { char = '-'}
 	var model = [];
-	for (var i = 0; i < len; i+=1) {
-		// 12 Sides
+	// Build 6 sides
+	for (var i=0; i < 6; i+=1) {
 		var point = []
-		model.push(point);
-	}
+
+		for (var j=0; j < len; j+=1) {
+			
+			model.push(point);
+		}
+
+	}	
 }	

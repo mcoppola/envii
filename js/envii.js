@@ -18,7 +18,8 @@ function Envi (canvas, window) {
 	this.printStyle = 'fill'; // not using, TODO: use!
 	this.resolutionFactor = 16;
 
-	this.shape = new Shapes();
+	this.shapes = new Shapes();
+	this.models = new Models();
 }
 
 // ----------- SCENE FUNCTIONS  ----------------------------------- // 
