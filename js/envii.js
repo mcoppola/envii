@@ -6,7 +6,7 @@
 function Envi (canvas, window) {
 	this.canvas = new Canvas(canvas);  // canvas context
 	this.keyboard = new Keyboard(window);
-	this.dummyContext = dummy; // dummy for imgGrid
+	//this.dummyContext = dummy; // dummy for imgGrid
 	this.width = this.canvas.width;  // canvas pixel dimmentions
 	this.height = this.canvas.height;
 	this.depth = (this.canvas.width+this.canvas.height)/2;  // z
