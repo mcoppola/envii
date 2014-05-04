@@ -6,17 +6,17 @@ function Models () {
 		[0,0,5,'0'], [5,0,5,'0'], [5,5,5,'0'], [0,5,5,'0']];
 
 	this.container = [[0,0,100,'&', '#fdfdfd'], [canvas.width,0,100,'&', '#fdfdfd'], [0,canvas.height,100, '&', '#fdfdfd'], 
-		[canvas.width,canvas.height,100,'&', '#fdfdfd'], [0,0,200,'&', '#fdfdfd'], [canvas.width,0,200,'&', '#fdfdfd'], 
-		[0,canvas.height,200, '&', '#fdfdfd'], [canvas.width,canvas.height,200,'&', '#fdfdfd'], [0,0,300,'&', '#fdfdfd'], 
-		[canvas.width,0,300,'&', '#fdfdfd'], [0,canvas.height,300, '&', '#fdfdfd'], [canvas.width,canvas.height,300,'&', '#fdfdfd'], 
-		[0,0,400,'&', '#fdfdfd'], [canvas.width,0,400,'&', '#fdfdfd'], [0,canvas.height,400, '&', '#fdfdfd'], 
-		[canvas.width,canvas.height,400,'&', '#fdfdfd'], [0,0,500,'&', '#fdfdfd'], [canvas.width,0,500,'&', '#fdfdfd'], 
-		[0,canvas.height,500, '&', '#fdfdfd'], [canvas.width,canvas.height,500,'&', '#fdfdfd'], [0,0,600,'&', '#fdfdfd'], 
-		[canvas.width,0,600,'&', '#fdfdfd'], [0,canvas.height,600, '&', '#fdfdfd'], [canvas.width,canvas.height,600,'&', '#fdfdfd'], 
+		[canvas.width,canvas.height,100,'&', '#fdfdfd'], [0,0,300,'&', '#fdfdfd'], [canvas.width,0,300,'&', '#fdfdfd'], 
+		[0,canvas.height,300, '&', '#fdfdfd'], [canvas.width,canvas.height,300,'&', '#fdfdfd'], [0,0,500,'&', '#fdfdfd'], 
+		[canvas.width,0,500,'&', '#fdfdfd'], [0,canvas.height,500, '&', '#fdfdfd'], [canvas.width,canvas.height,500,'&', '#fdfdfd'], 
 		[0,0,700,'&', '#fdfdfd'], [canvas.width,0,700,'&', '#fdfdfd'], [0,canvas.height,700, '&', '#fdfdfd'], 
-		[canvas.width,canvas.height,700,'&', '#fdfdfd'], [0,0,800,'&', '#fdfdfd'], [canvas.width,0,800,'&', '#fdfdfd'], 
-		[0,canvas.height,800, '&', '#fdfdfd'], [canvas.width,canvas.height,800,'&', '#fdfdfd'], [0,0,900,'&', '#fdfdfd'], 
-		[canvas.width,0,900,'&', '#fdfdfd'], [0,canvas.height,900, '&', '#fdfdfd'], [canvas.width,canvas.height,900,'&', '#fdfdfd']];
+		[canvas.width,canvas.height,700,'&', '#fdfdfd'], [0,0,900,'&', '#fdfdfd'], [canvas.width,0,900,'&', '#fdfdfd'], 
+		[0,canvas.height,900, '&', '#fdfdfd'], [canvas.width,canvas.height,900,'&', '#fdfdfd'], [0,0,1100,'&', '#fdfdfd'], 
+		[canvas.width,0,1100,'&', '#fdfdfd'], [0,canvas.height,1100, '&', '#fdfdfd'], [canvas.width,canvas.height,1100,'&', '#fdfdfd'], 
+		[0,0,1300,'&', '#fdfdfd'], [canvas.width,0,1300,'&', '#fdfdfd'], [0,canvas.height,1300, '&', '#fdfdfd'], 
+		[canvas.width,canvas.height,1300,'&', '#fdfdfd'], [0,0,1500,'&', '#fdfdfd'], [canvas.width,0,1500,'&', '#fdfdfd'], 
+		[0,canvas.height,1500, '&', '#fdfdfd'], [canvas.width,canvas.height,1500,'&', '#fdfdfd'], [0,0,1700,'&', '#fdfdfd'], 
+		[canvas.width,0,1700,'&', '#fdfdfd'], [0,canvas.height,1700, '&', '#fdfdfd'], [canvas.width,canvas.height,1700,'&', '#fdfdfd']];
 
 	// 2D grid
 	this.grid2D = function ( width, height, asci ) {
@@ -65,21 +65,21 @@ function Models () {
 
 	// 10^3
 	this.sun = [
-		[5,0,5, '.', '#FFCC00'], [0,5,5, '.', '#FFCC00'], [10,5,5, '.', '#FFCC00'], [5,10,5, '.', '#FFCC00'],  /* corners */
-		[5,5,0, '.', '#FFCC00'], [5,5,10, '.', '#FFCC00'],
-		[4,1,5, '.', '#FFCC00'], [3,2,5, '.', '#FFCC00'], [2,3,5, '.', '#FFCC00'], [1,4,5, '.', '#FFCC00'],    /* sides */
-		[6,1,5, '.', '#FFCC00'], [7,2,5, '.', '#FFCC00'], [8,3,5, '.', '#FFCC00'], [9,4,5, '.', '#FFCC00'],
-		[4,9,5, '.', '#FFCC00'], [3,8,5, '.', '#FFCC00'], [2,7,5, '.', '#FFCC00'], [1,6,5, '.', '#FFCC00'],
-		[6,9,5, '.', '#FFCC00'], [7,8,5, '.', '#FFCC00'], [8,7,5, '.', '#FFCC00'], [9,6,5, '.', '#FFCC00'],
-		[5,1,4, '.', '#FFCC00'], [5,2,3, '.', '#FFCC00'], [5,3,2, '.', '#FFCC00'], [5,4,1, '.', '#FFCC00'],
-		[5,1,6, '.', '#FFCC00'], [5,2,7, '.', '#FFCC00'], [5,3,8, '.', '#FFCC00'], [5,4,9, '.', '#FFCC00'],
-		[5,9,4, '.', '#FFCC00'], [5,8,3, '.', '#FFCC00'], [5,7,2, '.', '#FFCC00'], [5,6,1, '.', '#FFCC00'],
-		[5,9,6, '.', '#FFCC00'], [5,8,7, '.', '#FFCC00'], [5,7,8, '.', '#FFCC00'], [5,6,9, '.', '#FFCC00'],
-		[4,5,1, '.', '#FFCC00'], [3,5,2, '.', '#FFCC00'], [2,5,3, '.', '#FFCC00'], [1,5,4, '.', '#FFCC00'],
-		[6,5,1, '.', '#FFCC00'], [7,5,2, '.', '#FFCC00'], [8,5,3, '.', '#FFCC00'], [9,5,4, '.', '#FFCC00'],
-		[4,5,9, '.', '#FFCC00'], [3,5,8, '.', '#FFCC00'], [2,5,7, '.', '#FFCC00'], [1,5,6, '.', '#FFCC00'],
-		[6,5,9, '.', '#FFCC00'], [7,5,8, '.', '#FFCC00'], [8,5,7, '.', '#FFCC00'], [9,5,6, '.', '#FFCC00'],
-		[3,5,3, '.', '#FFCC00'], [3,5,8, '.', '#FFCC00'], [8,5,3, '.', '#FFCC00'], [8,5,8, '.', '#FFCC00']
+		[5,0,5, '#', '#FFCC00'], [0,5,5, '#', '#FFCC00'], [10,5,5, '#', '#FFCC00'], [5,10,5, '#', '#FFCC00'],  /* corners */
+		[5,5,0, '#', '#FFCC00'], [5,5,10, '#', '#FFCC00'],
+		[4,1,5, '-', '#FFCC00'], [3,2,5, '-', '#FFCC00'], [2,3,5, '-', '#FFCC00'], [1,4,5, '-', '#FFCC00'],    /* sides */
+		[6,1,5, '-', '#FFCC00'], [7,2,5, '-', '#FFCC00'], [8,3,5, '-', '#FFCC00'], [9,4,5, '-', '#FFCC00'],
+		[4,9,5, '-', '#FFCC00'], [3,8,5, '-', '#FFCC00'], [2,7,5, '-', '#FFCC00'], [1,6,5, '-', '#FFCC00'],
+		[6,9,5, '-', '#FFCC00'], [7,8,5, '-', '#FFCC00'], [8,7,5, '-', '#FFCC00'], [9,6,5, '-', '#FFCC00'],
+		[5,1,4, '-', '#FFCC00'], [5,2,3, '-', '#FFCC00'], [5,3,2, '-', '#FFCC00'], [5,4,1, '-', '#FFCC00'],
+		[5,1,6, '-', '#FFCC00'], [5,2,7, '-', '#FFCC00'], [5,3,8, '-', '#FFCC00'], [5,4,9, '-', '#FFCC00'],
+		[5,9,4, '-', '#FFCC00'], [5,8,3, '-', '#FFCC00'], [5,7,2, '-', '#FFCC00'], [5,6,1, '-', '#FFCC00'],
+		[5,9,6, '-', '#FFCC00'], [5,8,7, '-', '#FFCC00'], [5,7,8, '-', '#FFCC00'], [5,6,9, '-', '#FFCC00'],
+		[4,5,1, '-', '#FFCC00'], [3,5,2, '-', '#FFCC00'], [2,5,3, '-', '#FFCC00'], [1,5,4, '-', '#FFCC00'],
+		[6,5,1, '-', '#FFCC00'], [7,5,2, '-', '#FFCC00'], [8,5,3, '-', '#FFCC00'], [9,5,4, '-', '#FFCC00'],
+		[4,5,9, '-', '#FFCC00'], [3,5,8, '-', '#FFCC00'], [2,5,7, '-', '#FFCC00'], [1,5,6, '-', '#FFCC00'],
+		[6,5,9, '-', '#FFCC00'], [7,5,8, '-', '#FFCC00'], [8,5,7, '-', '#FFCC00'], [9,5,6, '-', '#FFCC00'],
+		[3,5,3, '-', '#FFCC00'], [3,5,8, '-', '#FFCC00'], [8,5,3, '-', '#FFCC00'], [8,5,8, '-', '#FFCC00']
 
 	];
 

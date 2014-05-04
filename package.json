@@ -1,5 +1,6 @@
 {
   "name": "envii",
+  "author": "Matthew Coppola <coppola@punkave.com>",
   "version": "0.0.01",
   "description": "3D ASCII Graphics for Canvas",
   "directories": {
@@ -12,10 +13,9 @@
   "keywords": [
     "graphics",
     "canvas",
-    "3D"
+    "3D",
+    "ASCII"
   ],
-  "author": "Matthew Coppola <coppola@punkave.com>",
-  "license": "MIT",
   "devDependencies": {
     "gulp-concat": "~2.2.0",
     "gulp": "~3.6.0",

@@ -1,5 +1,4 @@
-// ------------ UTILITIES + INITS -------------------------------------- // 
-
+// ------------ ENVIROMENT + CONTROLLER INITS -------------------------------------- // 
 
 function Canvas(elem) {
     this.elem = elem;
@@ -22,7 +21,7 @@ function Keyboard(window) {
     window.addEventListener("keyup", keyboard.keyRelease.bind(keyboard));
     return keyboard;
 }
-Envi.prototype.keycheck = function () {
+Envi.prototype.keyCheck = function () {
 	if (this.keyboard.keys[39] > 0) {
         this.shiftX += 0.025;               
       }
@@ -34,6 +33,26 @@ Envi.prototype.keycheck = function () {
     }
     if (this.keyboard.keys[40] > 0) {
         this.shiftY += 0.025; 
+    }
+}
+function Scroll(window) {
+    var scroll = {
+        deltaX : 0,
+        deltaY : 0
+    }
+    window.onscroll = function( e ) {
+        e.preventDefault();
+        scroll.deltaX = window.pageXOffset;
+        scroll.deltaY = window.pageYOffset;
+    }
+    return scroll;
+}
+Envi.prototype.scrollCheck = function () {
+    if (this.scroll.deltaY != 0) {
+        this.shiftY += 0.004*this.scroll.deltaY;
+    }
+    if (this.scroll.deltaX != 0) {
+        this.shiftX += 0.004*this.scroll.deltaX;
     }
 }
 

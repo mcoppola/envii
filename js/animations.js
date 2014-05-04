@@ -36,6 +36,39 @@ explode_infinite.prototype.processPoint = function (frame, point, asset) {
 	return point;
 }
 
+function rotateY (side, speed) {
+	if (speed === undefined) { speed = 1 };
+	this.side = side;
+	//this.half = side/2;
+	this.speed = speed;
+	this.state = 0;
+}
+rotateY.prototype.processPoint = function (frame, point, asset) {
+	var half = (this.side/2)*asset.scale;
+
+	// Get delay for x and z
+	var deltaX = Math.abs(half - point[0])/half;
+	var deltaZ = Math.abs(half - point[3])/half;
+
+	// rotation factor
+	var rotFactorX = deltaX*(this.side)*(this.state/1000);
+	point[0] = point[0]*rotFactorX*asset.scale;
+	var rotFactorZ = deltaZ*(this.side)*(this.state/1000);
+	point[2] = point[2]*rotFactorZ*asset.scale;
+
+	// we'll do it in 1000 steps
+	if (1000 > this.state) {
+		this.state += 1*this.speed;
+	}
+	else {
+		console.log("point[0]; " + point[0]);
+		console.log("deltaX: " + deltaX);
+		console.log("rotX: " + rotFactorX);
+		this.state = 0;
+	}
+	return point;
+}
+
 // ---- IMG GRID ---------------------------------------------------------- //
 //
 // animations will go through entire object by point

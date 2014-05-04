@@ -15,10 +15,12 @@ window.onload = function () {
     // --------------- MAKE ASSETS ------------------------------------------------------- //
     
     var box = new Asset(envi.models.container, 0, 0, 0, 1);
-    var sunA = new Asset(envi.models.sun, canvas.width/2 - 62, canvas.height/2 - 300, 200, 12);
-    var sunB = new Asset(envi.models.sun, canvas.width/2 - 62, canvas.height/2 + 200, 200, 12);
-    var sunC = new Asset(envi.models.sun, canvas.width/2 - 360, canvas.height/2 - 62, 200, 12);
-    var sunD = new Asset(envi.models.sun, canvas.width/2 + 250, canvas.height/2 - 62, 200, 12);
+    var sunA = new Asset(envi.models.sun, canvas.width/2 - 62, canvas.height/2 - 300, 200, 20);
+    var sunB = new Asset(envi.models.sun, canvas.width/2 - 62, canvas.height/2 + 200, 200, 20);
+    var sunC = new Asset(envi.models.sun, canvas.width/2 - 360, canvas.height/2 - 62, 200, 20);
+    var sunD = new Asset(envi.models.sun, canvas.width/2 + 250, canvas.height/2 - 62, 200, 20);
+
+    //sunA.modelAttributes[0] = new rotateY(10, 1);
 
     top.addEventListener('mousedown', function() {
         sunA.modelAttributes[0] = new explode_infinite(10, 300*Math.random(), 1);

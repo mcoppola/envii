@@ -5,14 +5,15 @@
 function Envi (canvas, window) {
 	this.canvas = new Canvas(canvas);  // canvas context
 	this.keyboard = new Keyboard(window);
-	//this.dummyContext = dummy; // dummy for imgGrid
+	this.scroll = new Scroll(window);
+	//this.dummyContext = dummy; // dummy canvas, required for imgGrid
 	this.width = this.canvas.width;  // canvas pixel dimmentions
 	this.height = this.canvas.height;
-	this.depth = (this.canvas.width+this.canvas.height)/2;  // z
+	this.depth = (this.canvas.width+this.canvas.height)/1.5;  // z
 	this.shiftX = 1;  // perspÏective shift
 	this.shiftY = 1;  // starting conditions
 	this.font = 'sans-serif';
-	this.fontMax = 50; 
+	this.fontMax = 25; 
 	this.fontStyle = ''; // include space at end if using
 	this.frame = [this.width, this.height, this.depth];
 	this.printStyle = 'fill'; // not using, TODO: use!
@@ -67,8 +68,9 @@ Scene.prototype.add = function (newAsset) {
 // Main game function
 Scene.prototype.play = function () {
 	
-	// update persective from key presses
-	this.envi.keycheck();
+	// update persective from key presses and scrolling
+	this.envi.keyCheck();
+	this.envi.scrollCheck();
 
 	// draw all assets in scene
 	this.envi.canvas.ctx.clearRect(0, 0, canvas.width, canvas.height);
