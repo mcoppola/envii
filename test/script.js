@@ -14,44 +14,32 @@ window.onload = function () {
 
     // --------------- MAKE ASSETS ------------------------------------------------------- //
     
-    var box = new Asset(envi.models.container, 0, 0, 0, 1);
-    var sunA = new Asset(envi.models.sun, canvas.width/2 - 62, canvas.height/2 - 300, 200, 20);
-    var sunB = new Asset(envi.models.sun, canvas.width/2 - 62, canvas.height/2 + 200, 200, 20);
-    var sunC = new Asset(envi.models.sun, canvas.width/2 - 360, canvas.height/2 - 62, 200, 20);
-    var sunD = new Asset(envi.models.sun, canvas.width/2 + 250, canvas.height/2 - 62, 200, 20);
 
-    //sunA.modelAttributes[0] = new rotateY(10, 1);
+    var cube = new Asset(envi.shapes.cube(20, '.'), window.innerWidth/2 - 150, window.innerHeight/2 - 150, 25, 15);
+    var inner = new Asset(envi.shapes.cube(20, '.', "#f00"), window.innerWidth/2 - 100, window.innerHeight/2 - 100, 100, 10);
+    var center = new Asset(envi.shapes.cube(10, '.', "#ff0"), window.innerWidth/2 - 50, window.innerHeight/2 - 50, 150, 10);
 
-    top.addEventListener('mousedown', function() {
-        sunA.modelAttributes[0] = new explode_infinite(10, 300*Math.random(), 1);
 
-        top.addEventListener('mousedown', function() {
-            sunB.modelAttributes[0] = new explode_infinite(10, 300*Math.random(), 1);
-        }, false);
-    }, false);
-    
 
     // --------------- LOAD ASSETS ------------------------------------------------------- //
 
     var assets = [];
     
-    assets[0] = box;
-    assets[1] = sunA;
-    assets[2] = sunB;
-    assets[3] = sunC;
-    assets[4] = sunD;
+    assets.push(cube);
+    assets.push(inner);
+    assets.push(center);
 
 
     // --------------- MAKE SCENE ------------------------------------------------------- //
 
-    scene = new Scene(envi, assets);
+    var scene = new Scene(envi, assets);
   
     // --------------  DRAW FRAME ------------------------------------------------------- /
 
     utils.getAnimationFrame();
-  (function drawFrame () {
-    window.requestAnimationFrame(drawFrame, canvas);
+    (function drawFrame () {
+        window.requestAnimationFrame(drawFrame, canvas);
 
-    scene.play();
-  }());
+        scene.play();
+    }());
 };

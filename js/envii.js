@@ -10,7 +10,7 @@ function Envi (canvas, window) {
 	this.width = this.canvas.width;  // canvas pixel dimmentions
 	this.height = this.canvas.height;
 	this.depth = (this.canvas.width+this.canvas.height)/1.5;  // z
-	this.shiftX = 1;  // perspÏective shift
+	this.shiftX = 1;  // perspective shift
 	this.shiftY = 1;  // starting conditions
 	this.font = 'sans-serif';
 	this.fontMax = 25; 

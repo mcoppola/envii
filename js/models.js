@@ -19,16 +19,20 @@ function Models () {
 		[canvas.width,0,1700,'&', '#fdfdfd'], [0,canvas.height,1700, '&', '#fdfdfd'], [canvas.width,canvas.height,1700,'&', '#fdfdfd']];
 
 	// 2D grid
-	this.grid2D = function ( width, height, asci ) {
+	this.grid2D = function ( width, height, asci, color ) {
 		if(typeof asci === "undefined") {
 	        asci = '.';
 	    }
-		var grid = []
+	    if(typeof color === "undefined") {
+	    	color = "#000"
+	    }
+		var grid = [];
 		for (var i = 1; i < width; i+=1) {
 			for(var j = 0; j < height; j+=1) {
-				grid.append([i, j, 1, asci ])
+				grid.push([i, j, 1, asci, color ]);
 			}
 		}
+		return grid;
 
 	}
 

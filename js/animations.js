@@ -47,20 +47,22 @@ rotateY.prototype.processPoint = function (frame, point, asset) {
 	var half = (this.side/2)*asset.scale;
 
 	// Get delay for x and z
-	var deltaX = Math.abs(half - point[0])/half;
-	var deltaZ = Math.abs(half - point[3])/half;
+	var deltaX = (this.half - point[0])/half;
+	var deltaZ = (this.half - point[2])/half;
+	//console.log("point[0]; " + point[0]);
 
 	// rotation factor
 	var rotFactorX = deltaX*(this.side)*(this.state/1000);
-	point[0] = point[0]*rotFactorX*asset.scale;
+	point[0] = point[0]*rotFactorX;
 	var rotFactorZ = deltaZ*(this.side)*(this.state/1000);
-	point[2] = point[2]*rotFactorZ*asset.scale;
+	point[2] = point[0]*rotFactorZ;
 
 	// we'll do it in 1000 steps
-	if (1000 > this.state) {
+	if (this.state < 1000) {
 		this.state += 1*this.speed;
 	}
 	else {
+		console.log("half: " + half);
 		console.log("point[0]; " + point[0]);
 		console.log("deltaX: " + deltaX);
 		console.log("rotX: " + rotFactorX);
@@ -68,6 +70,64 @@ rotateY.prototype.processPoint = function (frame, point, asset) {
 	}
 	return point;
 }
+function move (x, y, z, speed) {
+	this.x = x;
+	this.y = y;
+	this.z = z;
+	this.speed = speed;
+	this.state = 1;
+	this.max = 5000000;
+	this.firstTime = true;
+	this.sign = function(x) { return x > 0 ? 1 : x < 0 ? -1 : 0; }
+	//this.callback = callback;
+}
+move.prototype.processPoint = function (frame, point, asset) {
+	if (this.firstTime) {
+		this.dx = this.x - asset.xpos;
+		this.dy = this.y - asset.ypos;
+		this.dz = this.z - asset.zpos;
+		this.firstTime = false;
+	}
+	
+	point[0] = point[0] + ( this.dx*(this.state/this.max)*this.speed);
+	point[1] = point[1] + ( this.dy*(this.state/this.max)*this.speed);
+	point[2] = point[2] + ( this.dz*(this.state/this.max)*this.speed);
+	//if(this.state %10000 == 0) {console.log(point);}
+	this.state += 1;
+	//if ( this.state > this.max ){ return this.callback() }
+	return point;
+}
+
+/*function barWave (color) {
+	this.color = color;
+	this.state = 0;
+	this.firstTime = true;
+}
+barWave.prototype.gradient = function (startColor, endColor, steps) {
+	//var ratio = 0.5;
+	var hex = function(x) {
+	    x = x.toString(16);
+	    return (x.length == 1) ? '0' + x : x;
+	};
+
+
+	var r = Math.ceil(parseInt(startColor.substring(0,1), 16) * ratio + parseInt(endColor.substring(0,1), 16) * (1-ratio));
+	var g = Math.ceil(parseInt(startColor.substring(2,3), 16) * ratio + parseInt(endColor.substring(2,3), 16) * (1-ratio));
+	var b = Math.ceil(parseInt(startColor.substring(4,5), 16) * ratio + parseInt(endColor.substring(4,5), 16) * (1-ratio));
+
+	var middle = hex(r) + hex(g) + hex(b);
+
+ }
+barWave.prototype.processPoint = function (frame, point, asset) {
+	if (this.firstTime) {
+		this.steps = this.gradient(point[4], this.color, 100);
+		this.firstTime = false;
+		//console.log(point[4]);
+	}
+	point[4] = this.steps[Math.floor(this.state)];
+	this.state +=0.01;
+	return point;
+}*/
 
 // ---- IMG GRID ---------------------------------------------------------- //
 //

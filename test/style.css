@@ -9,7 +9,7 @@ body {
 	color: white; 
 } 
 #canvas {
-	background-color: #000;
+	background-color: #fff;
 	position: absolute;
 	display: block;
 	z-index: 0;
@@ -25,9 +25,18 @@ body {
 {
 	position: absolute;
 	top: 48vh;
-	font-size: 1em;
-	color: gray;
+	font-size: 10em;
+	color: rgba(0, 0, 255, 0.8);
 	text-align: center;
 	width: 100%;
 	cursor: pointer;
+}
+#mangia
+{
+	position: fixed;
+	top: 0;
+	width: 90vw;
+	height: 60vw;
+	margin: 0 auto;
+	z-index: 2;
 }
