@@ -18,23 +18,6 @@ function Models () {
 		[0,canvas.height,1500, '&', '#fdfdfd'], [canvas.width,canvas.height,1500,'&', '#fdfdfd'], [0,0,1700,'&', '#fdfdfd'], 
 		[canvas.width,0,1700,'&', '#fdfdfd'], [0,canvas.height,1700, '&', '#fdfdfd'], [canvas.width,canvas.height,1700,'&', '#fdfdfd']];
 
-	// 2D grid
-	this.grid2D = function ( width, height, asci, color ) {
-		if(typeof asci === "undefined") {
-	        asci = '.';
-	    }
-	    if(typeof color === "undefined") {
-	    	color = "#000"
-	    }
-		var grid = [];
-		for (var i = 1; i < width; i+=1) {
-			for(var j = 0; j < height; j+=1) {
-				grid.push([i, j, 1, asci, color ]);
-			}
-		}
-		return grid;
-
-	}
 
 	// 10^3
 	this.diamond = [ 

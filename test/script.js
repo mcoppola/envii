@@ -15,8 +15,8 @@ window.onload = function () {
     // --------------- MAKE ASSETS ------------------------------------------------------- //
     
 
-    var cube = new Asset(envi.shapes.cube(20, '.'), window.innerWidth/2 - 150, window.innerHeight/2 - 150, 25, 15);
-    var inner = new Asset(envi.shapes.cube(20, '.', "#f00"), window.innerWidth/2 - 100, window.innerHeight/2 - 100, 100, 10);
+    var cube = new Asset(envi.shapes.cube(20, '#'), window.innerWidth/2 - 150, window.innerHeight/2 - 150, 25, 15);
+    var inner = new Asset(envi.shapes.cube(20, '*', "#f00"), window.innerWidth/2 - 100, window.innerHeight/2 - 100, 100, 10);
     var center = new Asset(envi.shapes.cube(10, '.', "#ff0"), window.innerWidth/2 - 50, window.innerHeight/2 - 50, 150, 10);
 
 

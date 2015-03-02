@@ -14,39 +14,48 @@ Shapes.prototype.cube = function(len, char, color) {
 		/// ------------------------------ //
 		// FRONT                           //
 		// ------------------------------- //
-		// left
+		// left, right, bottom, top
 		model.push([0,j,0, char, color]);
-		// right
 		model.push([len,j,0, char, color]);
-		// bottom
 		model.push([j,0,0, char, color]);
-		// top
 		model.push([j,len,0, char, color]);
 
 		// ------------------------------- //
 		// BACK                            //
 		// ------------------------------- //
-		// left
+		// left, right, bottom, top
 		model.push([0,j,len, char, color]);
-		// right
 		model.push([len,j,len, char, color]);
-		// bottom
 		model.push([j,0,len, char, color]);
-		// top
 		model.push([j,len,len, char, color]);
 
 		// ------------------------------- //
 		// SIDES                           //
 		// ------------------------------- //
-		// btm left
+		// btm left, top left, btm right, top right
 		model.push([0,0,j, char, color]);
-		// top left
 		model.push([0,len,j, char, color]);
-		// btm right
 		model.push([len,0,j, char, color]);
-		// top right
 		model.push([len,len,j, char, color]);
 
 	}	
 	return model;
 }	
+
+// 2D grid
+Shapes.prototype.grid = function ( width, height, asci, color ) {
+	if(typeof asci === "undefined") {
+        asci = '.';
+    }
+    if(typeof color === "undefined") {
+    	color = "#000"
+    }
+	var grid = [];
+	for (var i = 1; i < width; i+=1) {
+		for(var j = 0; j < height; j+=1) {
+			grid.push([i, j, 1, asci, color ]);
+		}
+	}
+	return grid;
+
+}
