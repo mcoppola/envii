@@ -20,7 +20,6 @@ window.onload = function () {
     var center = new Asset(envi.shapes.cube(10, '.', "#ff0"), window.innerWidth/2 - 50, window.innerHeight/2 - 50, 150, 10);
 
 
-
     // --------------- LOAD ASSETS ------------------------------------------------------- //
 
     var assets = [];
