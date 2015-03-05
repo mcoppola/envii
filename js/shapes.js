@@ -58,6 +58,39 @@ Shapes.prototype.rectang = function(w, h, char, color) {
 	return model;
 }
 
+
+// ------------------------------------------------- //
+// TODO 
+// ------------------------------------------------- //
+
+
+Shapes.prototype.sphere = function(r, char, color) {
+	if (char === undefined) { char = '.'}
+	if (color === undefined) { color = '#000'}
+	var model = [];
+
+		
+
+}
+
+// Random scatter of characters within a cube
+// l = length of cube
+// freq = random frequency
+// char + color can accept arrays
+Shapes.prototype.scatterCube = function(l, freq, char, color) {
+	if (char === undefined) { char = ['.'] }
+	if (!(char instanceof Array)) { char = [char] }
+	if (color === undefined) { color = '#000'}
+	if (!(color instanceof Array)) { color = [color] }
+	var model = [];
+
+	for (var i=0; i < l*l*freq; i++) {
+		model.push([Math.random()*l, Math.random()*l, Math.random()*l, char[Math.floor(Math.random() * char.length)], color[Math.floor(Math.random() * color.length)]]);
+	}
+
+	return model;
+}
+
 // 2D grid
 Shapes.prototype.grid = function ( width, height, asci, color ) {
 	if(typeof asci === "undefined") {
