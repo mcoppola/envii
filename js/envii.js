@@ -5,7 +5,7 @@
 function Envi (canvas, window) {
 	this.canvas = new Canvas(canvas);  // canvas context
 	this.keyboard = new Keyboard(window);
-	this.scroll = new Scroll(window);
+	// this.scroll = new Scroll(canvas);
 	//this.dummyContext = dummy; // dummy canvas, required for imgGrid
 	this.width = this.canvas.width;  // canvas pixel dimmentions
 	this.height = this.canvas.height;
@@ -13,7 +13,7 @@ function Envi (canvas, window) {
 	this.shiftX = 1;  // perspective shift
 	this.shiftY = 1;  // starting conditions
 	this.font = 'sans-serif';
-	this.fontMax = 25; 
+	this.fontMax = 15; 
 	this.fontStyle = ''; // include space at end if using
 	this.frame = [this.width, this.height, this.depth];
 	this.printStyle = 'fill'; // not using, TODO: use!
@@ -70,10 +70,10 @@ Scene.prototype.play = function () {
 	
 	// update persective from key presses and scrolling
 	this.envi.keyCheck();
-	this.envi.scrollCheck();
+	// this.envi.scrollCheck();
 
 	// draw all assets in scene
-	this.envi.canvas.ctx.clearRect(0, 0, canvas.width, canvas.height);
+	this.envi.canvas.ctx.clearRect(0, 0, this.envi.width, this.envi.height);
 	for (var i = 0; i < this.assets.length; i+=1) {
 		this.assets[i].draw(this.envi);
 	}

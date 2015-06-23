@@ -5,18 +5,18 @@ function Models () {
 	this.box = [[0,0,0,'0'], [5,0,0,'0'], [5,5,0,'0'], [0,5,0,'0'],
 		[0,0,5,'0'], [5,0,5,'0'], [5,5,5,'0'], [0,5,5,'0']];
 
-	this.container = [[0,0,100,'&', '#fdfdfd'], [canvas.width,0,100,'&', '#fdfdfd'], [0,canvas.height,100, '&', '#fdfdfd'], 
-		[canvas.width,canvas.height,100,'&', '#fdfdfd'], [0,0,300,'&', '#fdfdfd'], [canvas.width,0,300,'&', '#fdfdfd'], 
-		[0,canvas.height,300, '&', '#fdfdfd'], [canvas.width,canvas.height,300,'&', '#fdfdfd'], [0,0,500,'&', '#fdfdfd'], 
-		[canvas.width,0,500,'&', '#fdfdfd'], [0,canvas.height,500, '&', '#fdfdfd'], [canvas.width,canvas.height,500,'&', '#fdfdfd'], 
-		[0,0,700,'&', '#fdfdfd'], [canvas.width,0,700,'&', '#fdfdfd'], [0,canvas.height,700, '&', '#fdfdfd'], 
-		[canvas.width,canvas.height,700,'&', '#fdfdfd'], [0,0,900,'&', '#fdfdfd'], [canvas.width,0,900,'&', '#fdfdfd'], 
-		[0,canvas.height,900, '&', '#fdfdfd'], [canvas.width,canvas.height,900,'&', '#fdfdfd'], [0,0,1100,'&', '#fdfdfd'], 
-		[canvas.width,0,1100,'&', '#fdfdfd'], [0,canvas.height,1100, '&', '#fdfdfd'], [canvas.width,canvas.height,1100,'&', '#fdfdfd'], 
-		[0,0,1300,'&', '#fdfdfd'], [canvas.width,0,1300,'&', '#fdfdfd'], [0,canvas.height,1300, '&', '#fdfdfd'], 
-		[canvas.width,canvas.height,1300,'&', '#fdfdfd'], [0,0,1500,'&', '#fdfdfd'], [canvas.width,0,1500,'&', '#fdfdfd'], 
-		[0,canvas.height,1500, '&', '#fdfdfd'], [canvas.width,canvas.height,1500,'&', '#fdfdfd'], [0,0,1700,'&', '#fdfdfd'], 
-		[canvas.width,0,1700,'&', '#fdfdfd'], [0,canvas.height,1700, '&', '#fdfdfd'], [canvas.width,canvas.height,1700,'&', '#fdfdfd']];
+	// this.container = [[0,0,100,'&', '#fdfdfd'], [canvas.width,0,100,'&', '#fdfdfd'], [0,canvas.height,100, '&', '#fdfdfd'], 
+	// 	[canvas.width,canvas.height,100,'&', '#fdfdfd'], [0,0,300,'&', '#fdfdfd'], [canvas.width,0,300,'&', '#fdfdfd'], 
+	// 	[0,canvas.height,300, '&', '#fdfdfd'], [canvas.width,canvas.height,300,'&', '#fdfdfd'], [0,0,500,'&', '#fdfdfd'], 
+	// 	[canvas.width,0,500,'&', '#fdfdfd'], [0,canvas.height,500, '&', '#fdfdfd'], [canvas.width,canvas.height,500,'&', '#fdfdfd'], 
+	// 	[0,0,700,'&', '#fdfdfd'], [canvas.width,0,700,'&', '#fdfdfd'], [0,canvas.height,700, '&', '#fdfdfd'], 
+	// 	[canvas.width,canvas.height,700,'&', '#fdfdfd'], [0,0,900,'&', '#fdfdfd'], [canvas.width,0,900,'&', '#fdfdfd'], 
+	// 	[0,canvas.height,900, '&', '#fdfdfd'], [canvas.width,canvas.height,900,'&', '#fdfdfd'], [0,0,1100,'&', '#fdfdfd'], 
+	// 	[canvas.width,0,1100,'&', '#fdfdfd'], [0,canvas.height,1100, '&', '#fdfdfd'], [canvas.width,canvas.height,1100,'&', '#fdfdfd'], 
+	// 	[0,0,1300,'&', '#fdfdfd'], [canvas.width,0,1300,'&', '#fdfdfd'], [0,canvas.height,1300, '&', '#fdfdfd'], 
+	// 	[canvas.width,canvas.height,1300,'&', '#fdfdfd'], [0,0,1500,'&', '#fdfdfd'], [canvas.width,0,1500,'&', '#fdfdfd'], 
+	// 	[0,canvas.height,1500, '&', '#fdfdfd'], [canvas.width,canvas.height,1500,'&', '#fdfdfd'], [0,0,1700,'&', '#fdfdfd'], 
+	// 	[canvas.width,0,1700,'&', '#fdfdfd'], [0,canvas.height,1700, '&', '#fdfdfd'], [canvas.width,canvas.height,1700,'&', '#fdfdfd']];
 
 
 	// 10^3

@@ -19,9 +19,9 @@ window.onload = function () {
     var recB = new Asset(envi.shapes.rectang(30,10, '@', '#0fe'), window.innerWidth/2 - 450, window.innerHeight/2 - 150, 200, 30);
     var recC = new Asset(envi.shapes.rectang(30,10, '@', '#fa0'), window.innerWidth/2 - 450, window.innerHeight/2 - 150, 300, 30);
     
-    var cubeA = new Asset(envi.shapes.cube(20, '*', '#adf'), window.innerWidth/2 - 450, window.innerHeight/2 - 150, 400, 15);
-    var cubeB = new Asset(envi.shapes.cube(20, '*', '#adf'), window.innerWidth/2 - 150, window.innerHeight/2 - 150, 400, 15);
-    var cubeC = new Asset(envi.shapes.cube(20, '*', '#adf'), window.innerWidth/2 + 150, window.innerHeight/2 - 150, 400, 15);
+    var cubeA = new Asset(envi.shapes.cube(20, '*', '#eef'), window.innerWidth/2 - 450, window.innerHeight/2 - 150, 400, 15);
+    var cubeB = new Asset(envi.shapes.cube(20, '*', '#eef'), window.innerWidth/2 - 150, window.innerHeight/2 - 150, 400, 15);
+    var cubeC = new Asset(envi.shapes.cube(20, '*', '#eef'), window.innerWidth/2 + 150, window.innerHeight/2 - 150, 400, 15);
 
     var scatterA = new Asset(envi.shapes.scatterCube(20, 0.5, ['*', '.', '+'], '#0ff'), window.innerWidth/2 - 450, window.innerHeight/2 - 150, 400, 15);
     var scatterB = new Asset(envi.shapes.scatterCube(20, 0.5, ['*', '.', '+'], ['#f00', '#ff0', '#00f', '#0f0']), window.innerWidth/2 - 150, window.innerHeight/2 - 150, 400, 15);
@@ -38,9 +38,9 @@ window.onload = function () {
     assets.push(cubeA);
     assets.push(cubeB);
     assets.push(cubeC);
-    // assets.push(scatterA);
+    assets.push(scatterA);
     assets.push(scatterB);
-    // assets.push(scatterC);
+    assets.push(scatterC);
     
 
     // --------------- MAKE SCENE ------------------------------------------------------- //
