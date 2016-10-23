@@ -10,22 +10,19 @@ window.onload = function () {
     mouse = utils.captureMouse(canvas);
 
     envi = new Envi(canvas, window);
+    envi.mouse = mouse;
 
 
     // --------------- MAKE ASSETS ------------------------------------------------------- //
     
 
-    var recA = new Asset(envi.shapes.rectang(30,10, '@', '#f0e'), window.innerWidth/2 - 450, window.innerHeight/2 - 150, 100, 30);
-    var recB = new Asset(envi.shapes.rectang(30,10, '@', '#0fe'), window.innerWidth/2 - 450, window.innerHeight/2 - 150, 200, 30);
-    var recC = new Asset(envi.shapes.rectang(30,10, '@', '#fa0'), window.innerWidth/2 - 450, window.innerHeight/2 - 150, 300, 30);
+    var recA = new Asset(envi.shapes.rectang(30,15, 'H', 'blue'), window.innerWidth/2 - 600, window.innerHeight/2 - 300, 100, 40);
+    var recB = new Asset(envi.shapes.rectang(30,15, 'E', 'blue'), window.innerWidth/2 - 600, window.innerHeight/2 - 300, 250, 40);
+    var recC = new Asset(envi.shapes.rectang(30,15, 'L', 'blue'), window.innerWidth/2 - 600, window.innerHeight/2 - 300, 400, 40);
+    var recD = new Asset(envi.shapes.rectang(30,15, 'L', 'blue'), window.innerWidth/2 - 600, window.innerHeight/2 - 300, 550, 40);
+    var recE = new Asset(envi.shapes.rectang(30,15, 'O', 'blue'), window.innerWidth/2 - 600, window.innerHeight/2 - 300, 700, 40);
     
-    var cubeA = new Asset(envi.shapes.cube(20, '*', '#eef'), window.innerWidth/2 - 450, window.innerHeight/2 - 150, 400, 15);
-    var cubeB = new Asset(envi.shapes.cube(20, '*', '#eef'), window.innerWidth/2 - 150, window.innerHeight/2 - 150, 400, 15);
-    var cubeC = new Asset(envi.shapes.cube(20, '*', '#eef'), window.innerWidth/2 + 150, window.innerHeight/2 - 150, 400, 15);
-
-    var scatterA = new Asset(envi.shapes.scatterCube(20, 0.5, ['*', '.', '+'], '#0ff'), window.innerWidth/2 - 450, window.innerHeight/2 - 150, 400, 15);
-    var scatterB = new Asset(envi.shapes.scatterCube(20, 0.5, ['*', '.', '+'], ['#f00', '#ff0', '#00f', '#0f0']), window.innerWidth/2 - 150, window.innerHeight/2 - 150, 400, 15);
-    var scatterC = new Asset(envi.shapes.scatterCube(20, 0.5, ['*', '.', '+'], '#ff0'), window.innerWidth/2 + 150, window.innerHeight/2 - 150, 400, 15);
+    var scatter = new Asset(envi.shapes.scatterCube(20, 0.5, ['hello', 'matthew coppola', 'web developer', ':)'], ['red', 'yellow', 'blue', 'green']), window.innerWidth/2 - 800, window.innerHeight/2 - 800, 400, 80);
 
 
     // --------------- LOAD ASSETS ------------------------------------------------------- //
@@ -35,12 +32,10 @@ window.onload = function () {
     assets.push(recA);
     assets.push(recB);
     assets.push(recC);
-    assets.push(cubeA);
-    assets.push(cubeB);
-    assets.push(cubeC);
-    assets.push(scatterA);
-    assets.push(scatterB);
-    assets.push(scatterC);
+    assets.push(recD);
+    assets.push(recE);
+    
+    assets.push(scatter);
     
 
     // --------------- MAKE SCENE ------------------------------------------------------- //
