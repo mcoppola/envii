@@ -35,6 +35,26 @@ Envi.prototype.keyCheck = function () {
         this.shiftY += 0.025; 
     }
 }
+Envi.prototype.mouseCheck = function () {
+  if (!this.mouse) return;
+  if (!this.mouseLastPos) { this.mouseLastPos = {x: window.outerWidth/2, y: window.outerHeight/2 }; return; }
+  if (this.mouse.x == this.mouseLastPos.x && this.mouse.y == this.mouseLastPos.y) { return; }
+  
+  
+  if (this.mouse.x > this.mouseLastPos.x) {
+    this.shiftX += (0.001)*(this.mouse.x - this.mouseLastPos.x);
+  } else if (this.mouse.x < this.mouseLastPos.x){
+    this.shiftX -= (0.001)*(this.mouseLastPos.x - this.mouse.x);
+  }
+  
+  if (this.mouse.y > this.mouseLastPos.y) {
+    this.shiftY += (0.001)*(this.mouse.y - this.mouseLastPos.y);
+  } else if (this.mouse.y < this.mouseLastPos.y){
+    this.shiftY -= 0.001*(this.mouseLastPos.y - this.mouse.y);
+  }
+  
+  this.mouseLastPos = { x: this.mouse.x, y: this.mouse.y};
+}
 function Scroll(window) {
     var scroll = {
         deltaX : 0,

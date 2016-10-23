@@ -2,7 +2,7 @@
 //
 // 3D ASCII Enviroment 
 
-function Envi (canvas, window) {
+function Envi (canvas, window, options) {
 	this.canvas = new Canvas(canvas);  // canvas context
 	this.keyboard = new Keyboard(window);
 	// this.scroll = new Scroll(canvas);
@@ -21,6 +21,7 @@ function Envi (canvas, window) {
 
 	this.shapes = new Shapes();
 	this.models = new Models();
+	
 }
 
 // ----------- SCENE FUNCTIONS  ----------------------------------- // 
@@ -70,6 +71,8 @@ Scene.prototype.play = function () {
 	
 	// update persective from key presses and scrolling
 	this.envi.keyCheck();
+	this.envi.mouseCheck();
+	
 	// this.envi.scrollCheck();
 
 	// draw all assets in scene
