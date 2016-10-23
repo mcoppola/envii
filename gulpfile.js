@@ -7,7 +7,7 @@ var watch = require('gulp-watch');
 gulp.task('build', function () {
   gulp.src(['./js/envii.js', './js/!(envii)*.js'])
     .pipe(uglify())
-    .pipe(concat('envii/min.js'))
+    .pipe(concat('envii.min.js'))
     .pipe(gulp.dest('./build'));
 });
 
