@@ -16,12 +16,14 @@ function Asset (geometry, x, y, z, scale) {
 	this.scale = scale;
 	this.modelAttributes = [];	
 	this.sceneAttributes = [];
+	this.transforms = [];
 	this.width = undefined;  // for img Grid objects
 	this.height = undefined;
 }
 
 Asset.prototype.draw = function (envi) {
 	this.doSceneAnimation(envi.frame);
+	this.doTranforms();
 	var point = [];
 	for (i = 0; i < this.geo.length; i+=1) {
 		point = this.setModelScale(this.geo[i]);
@@ -44,5 +46,16 @@ Asset.prototype.moveToScenePos = function (point) {
 Asset.prototype.doSceneAnimation = function (frame) {
 	for (var i = 0; i < this.sceneAttributes.length; i+=1) {
 		this.sceneAttributes[i].processPoint(this, frame);
+	}
+}
+Asset.prototype.transform = function(transform) {
+	this.transforms.push(transform);
+}
+Asset.prototype.doTranforms = function () {
+	for (var i = 0; i < this.transforms.length; i+=1) {
+		var transform = this.transforms[i].processPoint(this);
+		if (!transform) { 
+			this.transforms.splice(i,1);
+		}
 	}
 }

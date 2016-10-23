@@ -70,32 +70,32 @@ rotateY.prototype.processPoint = function (frame, point, asset) {
 	}
 	return point;
 }
-function move (x, y, z, speed) {
+function moveTo(x, y, z, speed) {
 	this.x = x;
 	this.y = y;
 	this.z = z;
 	this.speed = speed;
 	this.state = 1;
-	this.max = 5000000;
+	this.dist = 60;
 	this.firstTime = true;
 	this.sign = function(x) { return x > 0 ? 1 : x < 0 ? -1 : 0; }
 	//this.callback = callback;
 }
-move.prototype.processPoint = function (frame, point, asset) {
+moveTo.prototype.processPoint = function (asset) {
 	if (this.firstTime) {
-		this.dx = this.x - asset.xpos;
-		this.dy = this.y - asset.ypos;
-		this.dz = this.z - asset.zpos;
+		this.dx = this.x - asset.pos[0];
+		this.dy = this.y - asset.pos[1];
+		this.dz = this.z - asset.pos[2];
+		this.length = this.dist/this.speed;
 		this.firstTime = false;
 	}
+
+	asset.pos[0] += (this.dx/this.dist)*this.speed;
+	asset.pos[1] += (this.dx/this.dist)*this.speed;
+	asset.pos[2] += (this.dz/this.dist)*this.speed;
 	
-	point[0] = point[0] + ( this.dx*(this.state/this.max)*this.speed);
-	point[1] = point[1] + ( this.dy*(this.state/this.max)*this.speed);
-	point[2] = point[2] + ( this.dz*(this.state/this.max)*this.speed);
-	//if(this.state %10000 == 0) {console.log(point);}
-	this.state += 1;
-	//if ( this.state > this.max ){ return this.callback() }
-	return point;
+	this.state++;
+	return (this.state > this.length) ? 0 : 1;
 }
 
 /*function barWave (color) {
